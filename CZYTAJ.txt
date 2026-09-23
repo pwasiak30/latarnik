@@ -1,10 +1,20 @@
 Latarnia — pliki na GitHub Pages
 
-Rozpakuj ten zip. Wgraj ZAWARTOŚĆ (index.html, folder assets, .nojekyll)
-do nowego publicznego repozytorium o nazwie latarnia.
-Nie wgrywaj tego do repozytorium linktree.
+Struktura (dokładnie tak ma wyglądać repozytorium):
+  index.html
+  favicon.svg
+  .nojekyll        (plik ukryty, pusty — musi być)
+  assets/          (10 plików .js i .css)
 
-Potem w repozytorium: Settings → Pages → Deploy from a branch
-→ branch main, folder / (root) → Save.
+1. Rozpakuj zip.
+2. Na GitHubie utwórz NOWE publiczne repozytorium o nazwie: latarnia
+   (nie wgrywaj tego do repozytorium linktree).
+3. Add file → Upload files → przeciągnij ZAWARTOŚĆ folderu latarnia
+   (index.html, favicon.svg, .nojekyll i cały folder assets), nie sam folder.
+   Uwaga: .nojekyll jest ukryty — w menedżerze plików włącz pokazywanie
+   ukrytych plików (Dolphin: Ctrl+H).
+4. Settings → Pages → Deploy from a branch → branch: main, folder: / (root) → Save.
+5. Po 1–2 minutach: https://TWOJA-NAZWA.github.io/latarnia/
 
-Adres: https://TWOJA-NAZWA.github.io/latarnia/
+Adresy podstron mają znak # (np. .../latarnia/#/test?n=1) — tak ma być,
+dzięki temu odświeżenie strony nie daje błędu 404 na GitHub Pages.
