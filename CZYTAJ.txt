@@ -1,0 +1,10 @@
+Latarnia — pliki na GitHub Pages
+
+Rozpakuj ten zip. Wgraj ZAWARTOŚĆ (index.html, folder assets, .nojekyll)
+do nowego publicznego repozytorium o nazwie latarnia.
+Nie wgrywaj tego do repozytorium linktree.
+
+Potem w repozytorium: Settings → Pages → Deploy from a branch
+→ branch main, folder / (root) → Save.
+
+Adres: https://TWOJA-NAZWA.github.io/latarnia/
