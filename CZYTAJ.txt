@@ -18,3 +18,8 @@ Struktura (dokładnie tak ma wyglądać repozytorium):
 
 Adresy podstron mają znak # (np. .../latarnia/#/test?n=1) — tak ma być,
 dzięki temu odświeżenie strony nie daje błędu 404 na GitHub Pages.
+
+SOCIALE (pasek w lewym dolnym rogu + stopka)
+Adresy wpisujesz w pliku assets/social.js, w sekcji "1. KONFIGURACJA".
+Pozycja z pustym url: '' jest pomijana, więc nie ma martwych linków.
+Przykład: { id: 'x', nazwa: 'X (Twitter)', url: 'https://x.com/twojanazwa' },
