@@ -1,0 +1,89 @@
+/* ============================================================
+   SOCIAL — style paska profili i stopki
+   Kolory wzięte z palety Latarni (papier / atrament / rdza),
+   żeby pasek pasował do strony. Układ jak w design systemie:
+   ≥768px pionowa kolumna w lewym dolnym rogu,
+   <768px pozioma pigułka na dole ekranu.
+============================================================= */
+:root {
+  --social-tlo: rgba(251, 250, 247, 0.85);
+  --social-ramka: #ddd4c4;
+  --social-ikona: #5e584e;
+  --social-ikona-hover: #1c1916;
+  --social-hover-tlo: #e7e0d4;
+  --social-akcent: #9a3412;
+  --social-cien: 0 6px 24px rgba(28, 25, 22, 0.10);
+}
+
+/* ---- Pasek (FAB) ---- */
+.social-fab {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: var(--social-tlo);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--social-ramka);
+  box-shadow: var(--social-cien);
+}
+
+@media (min-width: 768px) {
+  .social-fab { left: 1.25rem; bottom: 1.25rem; flex-direction: column; }
+}
+
+@media (max-width: 767px) {
+  .social-fab {
+    left: 50%;
+    bottom: 0.75rem;
+    transform: translateX(-50%);
+    max-width: calc(100% - 2rem);
+    overflow-x: auto;
+  }
+  /* miejsce na pasek, żeby nie zasłaniał przycisków na dole strony */
+  body { padding-bottom: 4.5rem; }
+}
+
+.social-fab__link,
+.social-stopka__link {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--social-ikona);
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.social-fab__link { width: 38px; height: 38px; min-width: 38px; }
+.social-stopka__link { width: 32px; height: 32px; }
+
+.social-fab__link:hover,
+.social-stopka__link:hover { color: var(--social-ikona-hover); background: var(--social-hover-tlo); }
+
+.social-fab__link--akcent,
+.social-stopka__link--akcent { color: var(--social-akcent); }
+
+.social-fab a:focus-visible,
+.social-stopka a:focus-visible { outline: 2px solid var(--social-akcent); outline-offset: 2px; }
+
+/* ---- Stopka ---- */
+.social-stopka {
+  border-top: 1px solid var(--social-ramka);
+  padding: 2rem 1.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--social-ikona);
+}
+
+.social-stopka p { margin: 0; }
+.social-stopka__linki { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+.social-stopka p a { color: var(--social-akcent); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .social-fab__link, .social-stopka__link { transition: none; }
+}
